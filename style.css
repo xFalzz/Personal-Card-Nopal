@@ -1,0 +1,239 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background: linear-gradient(330deg,#e907e9,rgb(224, 68, 230));
+    background-repeat: no-repeat;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+.card-container{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 1px 5px 10px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+.top-box{
+    background: #5148c9;
+    height: 120px;
+    border-radius: 30px;
+    padding: 20px 30px;
+}
+.top-menu{
+    display: flex;
+    justify-content: space-between;
+}
+.top-box i{
+    font-size: 22px;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    width: 180px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 10;
+}
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown*/
+.dropdown:hover .dropbtn{
+    box-shadow: inset 0px 0px 2px 1px #394cbb;
+}
+.menu-list{
+    display: flex;
+    flex-direction: column;
+}
+.menu-list a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+    padding: 10px 20px;
+}
+.menu-list a:hover{
+    background: #ffc9e2;
+}
+.more{
+    right: 0;
+    padding: 10px;
+}
+.skills-title{
+    font-size: 15px;
+    color: #ee2482;
+}
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 5px;
+}
+.skills-list label{
+    font-size: 13px;
+    background: #7760e6;
+    color: #fff;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+/* Image Box*/
+
+.image-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -75px auto 10px auto;
+    height: 160px;
+    width: 160px;
+    background: #fff;
+    border-radius: 50%;
+}
+.image-box img{
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 2px 1px rgba(0,0,0,0.3);
+}
+/* User Infomation */
+.user-info .name{
+    display: flex;
+    justify-content: center;
+}
+.user-info .job{
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    color: #ee2482;
+}
+/* Social icons */
+.social-icons{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+}
+.social-icon-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.social-icon-box span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #593ceb;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .4s;
+    z-index: 2;
+}
+.social-icon-box span:hover{
+    color: #fff;
+    box-shadow: inset 0 0 0 20px #8c78f0;
+    transform: translateY(-5px);
+}
+.social-icon-box .social-icon-name{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    padding: 5px 20px;
+    font-size: 13px;
+    background: #8c78f0;
+    color: #fff;
+    border-radius: 30px;
+    transition: all .3s cubic-bezier(0.07, -0.55, 0.265, 1.55);
+}
+.social-icon-box span:hover ~ .social-icon-name{
+    top: -45px;
+    opacity: 1;
+}
+/* Hire Button*/
+.btn-box{
+    display: flex;
+    justify-content: center;
+}
+.btn-box .btn{
+    width: 80px;
+    height: 35px;
+    background: linear-gradient(to right,#583bdb,#b664c7);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.btn-box .btn:hover{
+    background: linear-gradient(to right,#aa4cbd,#513bca);
+}
+/* Animated circles */
+.circle-1{
+    position: absolute;
+    left: -20px;
+    top: 35%;
+    height: 50px;
+    width: 50px;
+    border: 2px dashed #c975fb;
+    border-radius: 50%;
+    animation: circle-1 5s ease-in-out infinite;
+}
+.circle-2{
+    position: absolute;
+    right: -20px;
+    bottom: -30px;
+    height: 100px;
+    width: 100px;
+    border: 2px dashed #c975fb;
+    border-radius: 50%;
+    animation: circle-2 15s ease-in-out infinite;
+}
+/* Circle-1 animation */
+@keyframes circle-1 {
+    50%{
+        left: -20px;
+        top: 40%;
+    }
+}
+/* Circle-1 animation */
+@keyframes circle-2 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
