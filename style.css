@@ -8,7 +8,8 @@
     font-family: 'Poppins',sans-serif;
 }
 body{
-    background: linear-gradient(330deg,#e907e9,rgb(224, 68, 230));
+    background: linear-gradient(330deg,#3F71EA,rgb(224, 68, 230));
+    background: linear-gradient(530deg,#3F71EA,rgb(224, 68, 230));
     background-repeat: no-repeat;
 }
 .container{
@@ -29,7 +30,7 @@ body{
     overflow: hidden;
 }
 .top-box{
-    background: #5148c9;
+    background: #3F71EA;
     height: 120px;
     border-radius: 30px;
     padding: 20px 30px;
@@ -136,7 +137,7 @@ body{
     display: flex;
     justify-content: center;
     font-size: 13px;
-    color: #ee2482;
+    color: #b93ceb;
 }
 /* Social icons */
 .social-icons{
@@ -183,23 +184,7 @@ body{
     top: -45px;
     opacity: 1;
 }
-/* Hire Button*/
-.btn-box{
-    display: flex;
-    justify-content: center;
-}
-.btn-box .btn{
-    width: 80px;
-    height: 35px;
-    background: linear-gradient(to right,#583bdb,#b664c7);
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-}
-.btn-box .btn:hover{
-    background: linear-gradient(to right,#aa4cbd,#513bca);
-}
+
 /* Animated circles */
 .circle-1{
     position: absolute;
