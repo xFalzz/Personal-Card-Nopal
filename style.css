@@ -22,7 +22,7 @@ body{
 .card-container{
     position: relative;
     width: 300px;
-    height: 420px;
+    height: 435px;
     background: #fff;
     margin: 10px 20px;
     border-radius: 30px;
@@ -140,50 +140,117 @@ body{
     color: #b93ceb;
 }
 /* Social icons */
-.social-icons{
-    display: flex;
-    justify-content: center;
-    margin: 10px 0 20px 0;
-}
-.social-icon-box{
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.social-icon-box span{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    border: 1px solid #593ceb;
-    margin: 5px;
-    border-radius: 50%;
+
+/* From Uiverse.io by Smit-Prajapati */ 
+.parent {
+    width: 300px;
+    padding: 10px;
+    perspective: 1000px;
+  }
+  
+  .card {
+    padding-top: auto;
+    /* order-radius: 10px; */
+    border: 3px solid rgb(255, 255, 255);
+    transform-style: preserve-3d;
+    background: linear-gradient(135deg,#0000 18.75%,#f3f3f3 0 31.25%,#0000 0),
+        repeating-linear-gradient(45deg,#f3f3f3 -6.25% 6.25%,#ffffff 0 18.75%);
+    background-size: 60px 60px;
+    background-position: 0 0, 0 0;
+    background-color: #f0f0f0;
+    width: 100%;
+    box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .card:hover {
+    background-position: -100px 100px, -100px 100px;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+  }
+  
+  .content-box {
+    background: rgba(71, 68, 230, 0.808);
+    border-radius: 20px 20px 20px;
+    transition: all 0.5s ease-in-out;
+    padding: 45px 25px 25px 25px;
+    transform-style: preserve-3d;
+  }
+  .content-box .card-title {
+    display: inline-block;
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 50px);
+  }
+  
+  .content-box .card-title:hover {
+    transform: translate3d(0px, 0px, 60px);
+  }
+  
+  .content-box .card-content {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #f2f2f2;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 30px);
+  }
+  
+  .content-box .card-content:hover {
+    transform: translate3d(0px, 0px, 60px);
+  }
+  
+  .content-box .see-more {
     cursor: pointer;
-    transition: .4s;
-    z-index: 2;
-}
-.social-icon-box span:hover{
-    color: #fff;
-    box-shadow: inset 0 0 0 20px #8c78f0;
-    transform: translateY(-5px);
-}
-.social-icon-box .social-icon-name{
+    margin-top: 1rem;
+    display: inline-block;
+    font-weight: 900;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: rgb(7, 44, 255);
+    /* border-radius: 5px; */
+    background: white;
+    padding: 0.5rem 0.7rem;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+  }
+  
+  .content-box .see-more:hover {
+    transform: translate3d(0px, 0px, 60px);
+  }
+  
+  .date-box {
     position: absolute;
-    top: 0;
-    opacity: 0;
-    padding: 5px 20px;
-    font-size: 13px;
-    background: #8c78f0;
-    color: #fff;
-    border-radius: 30px;
-    transition: all .3s cubic-bezier(0.07, -0.55, 0.265, 1.55);
-}
-.social-icon-box span:hover ~ .social-icon-name{
-    top: -45px;
-    opacity: 1;
-}
+    top: 25px;
+    right: 30px;
+    height: 60px;
+    width: 60px;
+    background: white;
+    border: 1px solid rgb(7, 135, 255);
+    border-radius: 10px;
+    padding: 10px;
+    transform: translate3d(0px, 0px, 80px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
+  }
+  
+  .date-box span {
+    display: block;
+    text-align: center;
+  }
+  
+  .date-box .month {
+    color: rgb(7, 135, 255);
+    font-size: 9px;
+    font-weight: 700;
+  }
+  
+  .date-box .date {
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(7, 135, 255);
+  }
+   
 
 /* Animated circles */
 .circle-1{
@@ -222,3 +289,95 @@ body{
         transform: rotate(360deg);
     }
 }
+
+/* Social */ 
+.social-buttons {
+    display: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 15px #00000027;
+    padding: 15px 10px;
+    border-radius: 5em;
+  }
+
+  /* Tambahkan media query untuk perangkat seluler */
+@media (max-width: 768px) {
+  .social-buttons {
+    display: flex;
+  }
+}
+  
+  .social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 60%;
+    margin: 0 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px #00000027;
+    transition: 0.3s;
+  }
+  
+  .social-button:hover {
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 6px 3px #00000027;
+  }
+  
+  .social-buttons svg {
+    transition: 0.3s;
+    height: 20px;
+  }
+  
+  .facebook {
+    background-color: #3b5998;
+  }
+  
+  .facebook svg {
+    fill: #f2f2f2;
+  }
+  
+  .facebook:hover svg {
+    fill: #3b5998;
+  }
+  
+  .github {
+    background-color: #333;
+  }
+  
+  .github svg {
+    width: 25px;
+    height: 25px;
+    fill: #f2f2f2;
+  }
+  
+  .github:hover svg {
+    fill: #333;
+  }
+  
+  .linkedin {
+    background-color: #0077b5;
+  }
+  
+  .linkedin svg {
+    fill: #f2f2f2;
+  }
+  
+  .linkedin:hover svg {
+    fill: #0077b5;
+  }
+  
+  .instagram {
+    background-color: #c13584;
+  }
+  
+  .instagram svg {
+    fill: #f2f2f2;
+  }
+  
+  .instagram:hover svg {
+    fill: #c13584;
+  }
+  
