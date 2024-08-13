@@ -150,7 +150,7 @@ body{
   
   .card {
     padding-top: auto;
-    border-radius: 30px;
+    border-radius: 20px;
     border: 3px solid rgb(255, 255, 255);
     transform-style: preserve-3d;
     background: linear-gradient(135deg,#0000 18.75%,#f3f3f3 0 31.25%,#0000 0),
